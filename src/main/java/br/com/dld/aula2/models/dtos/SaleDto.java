@@ -37,6 +37,7 @@ public class SaleDto {
 
         @JsonIgnoreProperties({"hibernateLazyInitializer", "handler"})
         private Product product;
+        private int amount;
         private BigDecimal subTotal;
     }
 
@@ -53,6 +54,7 @@ public class SaleDto {
                     SaleProductDto spd = new SaleProductDto();
                     spd.setId(sp.getId());
                     spd.setProduct(sp.getProduct());
+                    spd.setAmount(sp.getAmount());
                     spd.setSubTotal(sp.getSubTotal());
 
                     return spd;

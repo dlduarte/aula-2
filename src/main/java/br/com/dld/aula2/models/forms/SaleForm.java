@@ -29,6 +29,7 @@ public class SaleForm {
 
         private long id;
         private long productId;
+        private int amount;
         private BigDecimal subTotal;
     }
 
@@ -57,6 +58,7 @@ public class SaleForm {
                     product.setId(spf.getProductId());
 
                     saleProduct.setProduct(product);
+                    saleProduct.setAmount(spf.getAmount());
                     saleProduct.setSubTotal(spf.getSubTotal());
 
                     return saleProduct;
